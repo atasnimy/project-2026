@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UmmahLink - Community</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--emerald:#0B6E4F;
+--navy:#17324D;
+--beige:#F7F4EF;
+--gold:#D4A017;
+--white:#FFFFFF;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Work Sans',sans-serif;
+}
+
+body{
+background:var(--beige);
+color:#222;
+}
+
+header{
+background:white;
+padding:18px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+font-size:28px;
+font-family:'Amiri',serif;
+font-weight:bold;
+color:var(--emerald);
+}
+
+nav{
+display:flex;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:var(--navy);
+font-weight:600;
+}
+
+nav a:hover{
+color:var(--emerald);
+}
+
+.hero{
+padding:60px 10%;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+font-family:'Amiri',serif;
+color:var(--navy);
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+color:#555;
+}
+
+.search-area{
+padding:0 10% 40px;
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
+.search-area input,
+.search-area select{
+padding:14px;
+border-radius:12px;
+border:none;
+flex:1;
+min-width:180px;
+}
+
+.search-btn{
+background:var(--emerald);
+color:white;
+border:none;
+padding:14px 25px;
+border-radius:12px;
+cursor:pointer;
+}
+
+.section{
+padding:20px 10% 80px;
+}
+
+.section-title{
+font-size:34px;
+font-family:'Amiri',serif;
+color:var(--navy);
+margin-bottom:25px;
+}
+
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.avatar{
+width:60px;
+height:60px;
+border-radius:50%;
+background:var(--emerald);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.name{
+font-size:22px;
+font-weight:700;
+margin-bottom:5px;
+}
+
+.meta{
+color:#666;
+margin-bottom:12px;
+}
+
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-bottom:15px;
+}
+
+.tag{
+background:#eef8f4;
+color:var(--emerald);
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+}
+
+.actions{
+display:flex;
+gap:10px;
+}
+
+.btn{
+flex:1;
+padding:12px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+}
+
+.message-btn{
+background:var(--emerald);
+color:white;
+}
+
+.profile-btn{
+background:var(--navy);
+color:white;
+}
+
+footer{
+background:var(--navy);
+color:white;
+text-align:center;
+padding:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">UmmahLink</div>
+
+<nav>
+<a href="home.html">Home</a>
+<a href="community.html">Community</a>
+<a href="events.html">Events</a>
+<a href="learn.html">Learn</a>
+<a href="resources.html">Resources</a>
+<a href="dashboard.html">Dashboard</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<h1>Find People Who Understand Your Journey</h1>
+
+<p>
+Connect with fellow converts, mentors, study partners,
+and welcoming Muslim communities around the world.
+</p>
+
+</section>
+
+<div class="search-area">
+
+<input type="text" placeholder="Search people...">
+
+<select>
+<option>Country</option>
+<option>United States</option>
+<option>Canada</option>
+<option>United Kingdom</option>
+</select>
+
+<select>
+<option>Interest</option>
+<option>Prayer</option>
+<option>Learning</option>
+<option>Ramadan</option>
+<option>Friends</option>
+</select>
+
+<button class="search-btn">Search</button>
+
+</div>
+
+<section class="section">
+
+<h2 class="section-title">Suggested Connections</h2>
+
+<div class="card-grid">
+
+<div class="card">
+
+<div class="avatar">S</div>
+
+<div class="name">Sarah</div>
+
+<div class="meta">
+United Kingdom • 8 Months Since Shahadah
+</div>
+
+<div class="tags">
+<span class="tag">Prayer</span>
+<span class="tag">Quran</span>
+<span class="tag">Support</span>
+</div>
+
+<div class="actions">
+<button class="btn message-btn"
+onclick="openMessage('Sarah')">
+Say Salam
+</button>
+
+<button class="btn profile-btn"
+onclick="openProfile('Sarah')">
+Profile </button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="avatar">D</div>
+
+<div class="name">David</div>
+
+<div class="meta">
+Canada • 3 Months Since Shahadah
+</div>
+
+<div class="tags">
+<span class="tag">Arabic</span>
+<span class="tag">Prayer</span>
+<span class="tag">Friends</span>
+</div>
+
+<div class="actions">
+
+<button class="btn message-btn"
+onclick="openMessage('David')">
+Say Salam </button>
+
+<button class="btn profile-btn"
+onclick="openProfile('David')">
+Profile </button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="avatar">A</div>
+
+<div class="name">Amara</div>
+
+<div class="meta">
+Nigeria • 1 Year Since Shahadah
+</div>
+
+<div class="tags">
+<span class="tag">Mentor</span>
+<span class="tag">Learning</span>
+<span class="tag">Support</span>
+</div>
+
+<div class="actions">
+
+<button class="btn message-btn"
+onclick="openMessage('Amara')">
+Say Salam </button>
+
+<button class="btn profile-btn"
+onclick="openProfile('Amara')">
+Profile </button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 UmmahLink • Helping Converts Feel Connected
+</p>
+
+</footer>
+
+<script>
+
+function openMessage(name){
+
+window.location.href =
+"messages.html?user=" + encodeURIComponent(name);
+
+}
+
+function openProfile(name){
+
+window.location.href =
+"profile.html?user=" + encodeURIComponent(name);
+
+}
+
+</script>
+
+</body>
+</html>

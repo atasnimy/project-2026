@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events - UmmahLink</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Inherit the same design system from home.html */
+:root{
+--emerald:#0B6E4F;--navy:#17324D;--beige:#F7F4EF;--gold:#D4A017;--white:#FFFFFF;
+--bg:var(--beige);--surface:#FFFFFF;--surface-2:#FBF9F5;--border:rgba(23,50,77,0.11);
+--text:#182A3B;--text-muted:rgba(24,42,59,0.66);--shadow-sm:0 2px 10px -4px rgba(23,50,77,0.12);
+--shadow-md:0 16px 36px -18px rgba(23,50,77,0.28);--radius-md:18px;
+}
+[data-theme="dark"]{
+--bg:#0F1E2C;--surface:#15283A;--surface-2:#122232;--border:rgba(247,244,239,0.12);
+--text:#F3F1EC;--text-muted:rgba(243,241,236,0.66);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Work Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;}
+h1,h2,h3{font-family:'Amiri',serif;color:var(--navy);}[data-theme="dark"] h1,[data-theme="dark"] h2,[data-theme="dark"] h3{color:#FBF6EA;}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;}
+header{position:sticky;top:0;z-index:100;background:rgba(247,244,239,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:16px 24px;}
+[data-theme="dark"] header{background:rgba(15,30,44,0.85);}
+.nav-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Amiri',serif;font-weight:700;font-size:22px;color:var(--navy);}
+[data-theme="dark"] .brand{color:#FBF6EA;}
+.nav-links{display:flex;gap:6px;list-style:none;}
+.nav-links a{padding:10px 14px;border-radius:100px;text-decoration:none;color:var(--text);font-weight:500;}
+.nav-links a:hover{color:var(--emerald);background:var(--border);}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:100px;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:transform .2s;}
+.btn-primary{background:var(--emerald);color:#fff;}
+.btn:hover{transform:translateY(-2px);}
+.hero{padding:60px 0;text-align:center;}
+.hero h1{font-size:clamp(32px,4vw,48px);margin-bottom:16px;}
+.hero p{color:var(--text-muted);max-width:600px;margin:0 auto;font-size:18px;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:24px;box-shadow:var(--shadow-sm);}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin:40px 0;}
+@media(max-width:760px){.grid-2{grid-template-columns:1fr;}}
+.event-card{display:flex;gap:16px;}
+.event-date{width:64px;height:64px;border-radius:16px;background:var(--surface-2);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.event-date .mon{font-size:11px;font-weight:700;color:var(--emerald);text-transform:uppercase;}
+.event-date .day{font-family:'Amiri',serif;font-size:22px;color:var(--navy);}
+.event-body h3{font-size:18px;margin-bottom:8px;}
+.event-meta{display:flex;gap:12px;font-size:13px;color:var(--text-muted);margin-bottom:10px;}
+.event-meta span{display:flex;align-items:center;gap:4px;}
+footer{background:var(--navy);color:rgba(247,244,239,0.85);padding:40px 0;text-align:center;margin-top:60px;}
+</style>
+</head>
+<body>
+<header>
+<div class="nav-inner">
+<a href="home.html" class="brand">🕌 UmmahLink</a>
+<nav><ul class="nav-links">
+<li><a href="home.html">Home</a></li>
+<li><a href="community.html">Community</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="learn.html">Learn</a></li>
+<li><a href="resources.html">Resources</a></li>
+</ul></nav>
+<a href="dashboard.html" class="btn btn-primary">My Dashboard</a>
+</div>
+</header>
+<main class="container">
+<section class="hero">
+<h1>Upcoming Events Near You</h1>
+<p>From mosque open houses to convert support circles — find your people at real gatherings.</p>
+</section>
+<div class="grid-2" id="eventsGrid">
+<div class="card event-card">
+<div class="event-date"><span class="mon">Aug</span><span class="day">01</span></div>
+<div class="event-body"><span style="background:var(--emerald);color:#fff;padding:4px 10px;border-radius:100px;font-size:12px;">Mosque Open House</span><h3>Ask Us Anything: Open House</h3><div class="event-meta"><span>🕐 2:00 PM</span><span>📍 2.1 mi</span></div><p>No-pressure walkthrough of the mosque, prayer basics, and Q&A over tea.</p><button class="btn btn-primary">RSVP</button></div>
+</div>
+<div class="card event-card">
+<div class="event-date"><span class="mon">Aug</span><span class="day">03</span></div>
+<div class="event-body"><span style="background:var(--navy);color:#fff;padding:4px 10px;border-radius:100px;font-size:12px;">Support Circle</span><h3>New Muslim Weekly Check-In</h3><div class="event-meta"><span>🕐 7:00 PM</span><span>📍 4.6 mi</span></div><p>Confidential circle for converts to talk honestly about challenges.</p><button class="btn btn-primary">RSVP</button></div>
+</div>
+<div class="card event-card">
+<div class="event-date"><span class="mon">Aug</span><span class="day">08</span></div>
+<div class="event-body"><span style="background:var(--gold);color:var(--navy);padding:4px 10px;border-radius:100px;font-size:12px;">Eid Event</span><h3>Eid al-Adha Community Picnic</h3><div class="event-meta"><span>🕐 11:00 AM</span><span>📍 3.4 mi</span></div><p>Food, games, and takbeer. First-timers get a welcome table.</p><button class="btn btn-primary">RSVP</button></div>
+</div>
+<div class="card event-card">
+<div class="event-date"><span class="mon">Aug</span><span class="day">15</span></div>
+<div class="event-body"><span style="background:var(--emerald);color:#fff;padding:4px 10px;border-radius:100px;font-size:12px;">Volunteer</span><h3>Community Food Drive</h3><div class="event-meta"><span>🕐 9:00 AM</span><span>📍 5.2 mi</span></div><p>Help pack and distribute food to families in need.</p><button class="btn btn-primary">RSVP</button></div>
+</div>
+</div>
+</main>
+<footer><p>© 2026 UmmahLink · Made with care for the ummah.</p></footer>
+<script>
+document.querySelectorAll('.btn-primary').forEach(btn => {
+btn.addEventListener('click', function(){ this.textContent = "You're Going ✓"; this.style.background = 'var(--navy)'; });
+});
+</script>
+</body>
+</html>

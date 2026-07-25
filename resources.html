@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources - UmmahLink</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--emerald:#0B6E4F;--navy:#17324D;--beige:#F7F4EF;--gold:#D4A017;--white:#FFFFFF;
+--bg:var(--beige);--surface:#FFFFFF;--surface-2:#FBF9F5;--border:rgba(23,50,77,0.11);
+--text:#182A3B;--text-muted:rgba(24,42,59,0.66);--shadow-sm:0 2px 10px -4px rgba(23,50,77,0.12);--radius-md:18px;
+}
+[data-theme="dark"]{
+--bg:#0F1E2C;--surface:#15283A;--surface-2:#122232;--border:rgba(247,244,239,0.12);
+--text:#F3F1EC;--text-muted:rgba(243,241,236,0.66);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Work Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;}
+h1,h2,h3{font-family:'Amiri',serif;color:var(--navy);}[data-theme="dark"] h1,[data-theme="dark"] h2,[data-theme="dark"] h3{color:#FBF6EA;}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;}
+header{position:sticky;top:0;z-index:100;background:rgba(247,244,239,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:16px 24px;}
+[data-theme="dark"] header{background:rgba(15,30,44,0.85);}
+.nav-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Amiri',serif;font-weight:700;font-size:22px;color:var(--navy);}
+[data-theme="dark"] .brand{color:#FBF6EA;}
+.nav-links{display:flex;gap:6px;list-style:none;}
+.nav-links a{padding:10px 14px;border-radius:100px;text-decoration:none;color:var(--text);font-weight:500;}
+.nav-links a:hover{color:var(--emerald);}
+.hero{padding:60px 0;text-align:center;}
+.hero h1{font-size:clamp(32px,4vw,48px);margin-bottom:16px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:40px 0;}
+@media(max-width:760px){.grid-3{grid-template-columns:1fr;}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;box-shadow:var(--shadow-sm);text-align:center;}
+.card .icon{font-size:40px;margin-bottom:16px;}
+.card h3{font-size:20px;margin-bottom:10px;}
+.card p{color:var(--text-muted);margin-bottom:16px;}
+.btn{display:inline-block;padding:12px 24px;border-radius:100px;background:var(--emerald);color:#fff;text-decoration:none;font-weight:600;}
+.btn:hover{opacity:0.9;}
+footer{background:var(--navy);color:rgba(247,244,239,0.85);padding:40px 0;text-align:center;margin-top:60px;}
+</style>
+</head>
+<body>
+<header>
+<div class="nav-inner">
+<a href="home.html" class="brand">🕌 UmmahLink</a>
+<nav><ul class="nav-links">
+<li><a href="home.html">Home</a></li>
+<li><a href="community.html">Community</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="learn.html">Learn</a></li>
+<li><a href="resources.html">Resources</a></li>
+</ul></nav>
+</div>
+</header>
+<main class="container">
+<section class="hero">
+<h1>Support Whenever You Need It</h1>
+<p>Quick access to the help and guidance you need, right now.</p>
+</section>
+<div class="grid-3">
+<div class="card"><div class="icon">🕌</div><h3>Find a Mosque</h3><p>Locate verified mosques and prayer spaces near you.</p><a href="#" class="btn">Search Now</a></div>
+<div class="card"><div class="icon">🤝</div><h3>Local Organizations</h3><p>Convert-support groups and community organizations.</p><a href="#" class="btn">Browse</a></div>
+<div class="card"><div class="icon">📞</div><h3>Muslim Helplines</h3><p>Confidential support from trained volunteers.</p><a href="#" class="btn">Call Now</a></div>
+<div class="card"><div class="icon">💚</div><h3>Mental Health</h3><p>Faith-informed counseling and support directories.</p><a href="#" class="btn">Get Support</a></div>
+<div class="card"><div class="icon">📚</div><h3>New Muslim Guide</h3><p>Complete first-year handbook PDF.</p><a href="#" class="btn">Download</a></div>
+<div class="card"><div class="icon">❓</div><h3>Ask Anonymously</h3><p>Submit questions without sharing your identity.</p><a href="home.html#learn" class="btn">Ask Now</a></div>
+</div>
+</main>
+<footer><p>© 2026 UmmahLink · Made with care for the ummah.</p></footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn Islam - UmmahLink</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--emerald:#0B6E4F;--navy:#17324D;--beige:#F7F4EF;--gold:#D4A017;--white:#FFFFFF;
+--bg:var(--beige);--surface:#FFFFFF;--surface-2:#FBF9F5;--border:rgba(23,50,77,0.11);
+--text:#182A3B;--text-muted:rgba(24,42,59,0.66);--shadow-sm:0 2px 10px -4px rgba(23,50,77,0.12);--radius-md:18px;
+}
+[data-theme="dark"]{
+--bg:#0F1E2C;--surface:#15283A;--surface-2:#122232;--border:rgba(247,244,239,0.12);
+--text:#F3F1EC;--text-muted:rgba(243,241,236,0.66);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Work Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+h1,h2,h3{font-family:'Amiri',serif;color:var(--navy);}[data-theme="dark"] h1,[data-theme="dark"] h2,[data-theme="dark"] h3{color:#FBF6EA;}
+.container{max-width:900px;margin:0 auto;padding:0 24px;}
+header{position:sticky;top:0;z-index:100;background:rgba(247,244,239,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:16px 24px;}
+[data-theme="dark"] header{background:rgba(15,30,44,0.85);}
+.nav-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Amiri',serif;font-weight:700;font-size:22px;color:var(--navy);}
+[data-theme="dark"] .brand{color:#FBF6EA;}
+.nav-links{display:flex;gap:6px;list-style:none;}
+.nav-links a{padding:10px 14px;border-radius:100px;text-decoration:none;color:var(--text);font-weight:500;}
+.nav-links a:hover{color:var(--emerald);}
+.hero{padding:60px 0;text-align:center;}
+.hero h1{font-size:clamp(32px,4vw,48px);margin-bottom:16px;}
+.lesson-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);padding:28px;margin-bottom:20px;box-shadow:var(--shadow-sm);}
+.lesson-card h2{font-size:24px;margin-bottom:12px;display:flex;align-items:center;gap:12px;}
+.lesson-card .icon{width:48px;height:48px;border-radius:12px;background:var(--emerald);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;}
+.lesson-card p{color:var(--text-muted);margin-bottom:12px;}
+.lesson-card ul{padding-left:20px;color:var(--text-muted);}
+.lesson-card li{margin-bottom:8px;}
+.progress-bar{height:8px;border-radius:100px;background:var(--border);margin:20px 0;overflow:hidden;}
+.progress-fill{height:100%;background:var(--emerald);border-radius:100px;width:45%;}
+footer{background:var(--navy);color:rgba(247,244,239,0.85);padding:40px 0;text-align:center;margin-top:60px;}
+</style>
+</head>
+<body>
+<header>
+<div class="nav-inner">
+<a href="home.html" class="brand">🕌 UmmahLink</a>
+<nav><ul class="nav-links">
+<li><a href="home.html">Home</a></li>
+<li><a href="community.html">Community</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="learn.html">Learn</a></li>
+<li><a href="resources.html">Resources</a></li>
+</ul></nav>
+</div>
+</header>
+<main class="container">
+<section class="hero">
+<h1>Learn Islam at Your Own Pace</h1>
+<p>No assumed background. No question too basic. Start wherever you are.</p>
+<div class="progress-bar"><div class="progress-fill"></div></div>
+<p style="color:var(--emerald);">45% complete · Keep going!</p>
+</section>
+<div class="lesson-card" id="foundations">
+<div class="icon">📖</div>
+<h2>Foundations of Islam</h2>
+<p>Start here to understand what Islam is all about.</p>
+<ul>
+<li>✅ What is Islam?</li>
+<li>✅ Who is Allah?</li>
+<li>📖 The Prophets (in progress)</li>
+<li>The Qur'an</li>
+<li>The Five Pillars</li>
+<li>The Six Articles of Faith</li>
+</ul>
+</div>
+<div class="lesson-card">
+<div class="icon">🤲</div>
+<h2>Prayer (Salah)</h2>
+<p>Step-by-step guides to help you start praying.</p>
+<ul>
+<li>Wudu, step by step</li>
+<li>Salah times explained</li>
+<li>Prayer guide for beginners</li>
+<li>Common duas to learn</li>
+</ul>
+</div>
+<div class="lesson-card">
+<div class="icon">🌙</div>
+<h2>Everyday Muslim Life</h2>
+<p>Practical guidance for daily living as a Muslim.</p>
+<ul>
+<li>Halal food, simply explained</li>
+<li>Mosque etiquette</li>
+<li>Islamic greetings</li>
+<li>Ramadan basics</li>
+<li>Modesty in daily life</li>
+</ul>
+</div>
+</main>
+<footer><p>© 2026 UmmahLink · Made with care for the ummah.</p></footer>
+</body>
+</html>
